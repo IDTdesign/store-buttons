@@ -3,7 +3,7 @@
     @bd: none;
     @bdrs: 0.25em;
     @path: "";
-    @ext: "svg";
+    @ext: "png";
 
     &-appstore,
     &-gplay {
@@ -11,32 +11,54 @@
         vertical-align: text-bottom;
         overflow: hidden;
         font-size: @fz;
-        width: 9em; //144px when font-size: 16px
+        width: 8.5em; //136px when font-size: 16px
         height: 2.5em; //40px when font-size: 16px
         border: @bd;
         border-radius: @bdrs;
         padding: 0;
         background-color: #000;
-        background-size: 100% 100%;
         background-repeat: no-repeat;
         background-position: 50% 50%;
         color: transparent;
         //color: #FFF;
         text-indent: 150%;
         text-decoration: none;
+
+        @media (min-resolution: 2dppx) {
+            background-size: contain;
+        }
     }
 
-    &-appstore       { background-image: url("@{path}btn-appstore.@{ext}"); }
-    &-gplay          { background-image: url("@{path}btn-gplay.@{ext}"); }
+    &-appstore {
+        background-image: url("@{path}btn-appstore-en.@{ext}");
 
-    &-appstore-es    { background-image: url("@{path}btn-appstore-es.@{ext}"); }
-    &-gplay-es       { background-image: url("@{path}btn-gplay-es.@{ext}"); }
+        & when (@ext = 'png') {
+            @media (min-resolution: 2dppx) { background-image: url("@{path}btn-appstore-en@2x.png"); }
+        }
+    }
+    &-gplay {
+        background-image: url("@{path}btn-gplay-en.@{ext}");
 
-    &-appstore-de    { background-image: url("@{path}btn-appstore-de.@{ext}"); }
-    &-gplay-de       { background-image: url("@{path}btn-gplay-de.@{ext}"); }
+        & when (@ext = 'png') {
+            @media (min-resolution: 2dppx) { background-image: url("@{path}btn-gplay-en@2x.@{ext}"); }
+        }
+    }
 
-    &-appstore-fr    { background-image: url("@{path}btn-appstore-fr.@{ext}"); }
-    &-gplay-fr       { background-image: url("@{path}btn-gplay-fr.@{ext}"); }
+    &-appstore:lang(es) {
+        background-image: url("@{path}btn-appstore-es.@{ext}");
+
+        & when (@ext = 'png') {
+            @media (min-resolution: 2dppx) { background-image: url("@{path}btn-appstore-es@2x.png"); }
+        }
+    }
+
+    &-gplay:lang(es) {
+        background-image: url("@{path}btn-gplay-es.@{ext}");
+
+        & when (@ext = 'png') {
+            @media (min-resolution: 2dppx) { background-image: url("@{path}btn-gplay-es@2x.png"); }
+        }
+    }
 }
 
 /* hide buttons depending of mobile os */
