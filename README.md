@@ -5,8 +5,9 @@ App Store and Google Play Market buttons (unofficial)
 * [Official Google Play buttons](https://play.google.com/intl/en_us/badges/)
 * [Official Microsoft buttons](https://developer.microsoft.com/en-us/store/badges)
 
-
 [Demo page](dist/)
+
+[Download Sketch library](https://github.com/IDTdesign/store-buttons/raw/master/src/storebtn.sketch)
 
 ### Usage
 
