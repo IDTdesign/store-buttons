@@ -4,9 +4,11 @@
     @bdrs: 0.25em;
     @path: "";
     @ext: "png";
+    @links-hover: #2b9aff;
 
     &-appstore,
-    &-gplay {
+    &-gplay,
+    &-microsoft {
         display: inline-block;
         vertical-align: text-bottom;
         overflow: hidden;
@@ -19,28 +21,38 @@
         background-color: #000;
         background-repeat: no-repeat;
         background-position: 50% 50%;
+        background-size: contain;
         color: transparent;
-        //color: #FFF;
-        text-indent: 150%;
+        color: #FFF;
+        text-indent: -150%;
         text-decoration: none;
 
-        @media (min-resolution: 2dppx) {
-            background-size: contain;
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 0.25em fadeout(@links-hover, 60%);
         }
     }
 
-    &-appstore {
+    &-appstore  {
         background-image: url("@{path}btn-appstore-en.@{ext}");
 
         & when (@ext = 'png') {
             @media (min-resolution: 2dppx) { background-image: url("@{path}btn-appstore-en@2x.png"); }
         }
     }
-    &-gplay {
+    &-gplay  {
         background-image: url("@{path}btn-gplay-en.@{ext}");
 
         & when (@ext = 'png') {
             @media (min-resolution: 2dppx) { background-image: url("@{path}btn-gplay-en@2x.@{ext}"); }
+        }
+    }
+
+    &-microsoft  {
+        background-image: url("@{path}btn-microsoft-en.@{ext}");
+
+        & when (@ext = 'png') {
+            @media (min-resolution: 2dppx) { background-image: url("@{path}btn-microsoft-en@2x.@{ext}"); }
         }
     }
 
@@ -57,6 +69,86 @@
 
         & when (@ext = 'png') {
             @media (min-resolution: 2dppx) { background-image: url("@{path}btn-gplay-es@2x.png"); }
+        }
+    }
+
+    &-microsoft:lang(es) {
+        background-image: url("@{path}btn-microsoft-es.@{ext}");
+
+        & when (@ext = 'png') {
+            @media (min-resolution: 2dppx) { background-image: url("@{path}btn-microsoft-es@2x.png"); }
+        }
+    }
+
+    &-appstore:lang(de) {
+        background-image: url("@{path}btn-appstore-de.@{ext}");
+
+        & when (@ext = 'png') {
+            @media (min-resolution: 2dppx) { background-image: url("@{path}btn-appstore-de@2x.png"); }
+        }
+    }
+
+    &-gplay:lang(de) {
+        background-image: url("@{path}btn-gplay-de.@{ext}");
+
+        & when (@ext = 'png') {
+            @media (min-resolution: 2dppx) { background-image: url("@{path}btn-gplay-de@2x.png"); }
+        }
+    }
+
+    &-microsoft:lang(de) {
+        background-image: url("@{path}btn-microsoft-de.@{ext}");
+
+        & when (@ext = 'png') {
+            @media (min-resolution: 2dppx) { background-image: url("@{path}btn-microsoft-de@2x.png"); }
+        }
+    }
+
+    &-appstore:lang(fr) {
+        background-image: url("@{path}btn-appstore-fr.@{ext}");
+
+        & when (@ext = 'png') {
+            @media (min-resolution: 2dppx) { background-image: url("@{path}btn-appstore-fr@2x.png"); }
+        }
+    }
+
+    &-gplay:lang(fr) {
+        background-image: url("@{path}btn-gplay-fr.@{ext}");
+
+        & when (@ext = 'png') {
+            @media (min-resolution: 2dppx) { background-image: url("@{path}btn-gplay-fr@2x.png"); }
+        }
+    }
+
+    &-microsoft:lang(fr) {
+        background-image: url("@{path}btn-microsoft-fr.@{ext}");
+
+        & when (@ext = 'png') {
+            @media (min-resolution: 2dppx) { background-image: url("@{path}btn-microsoft-fr@2x.png"); }
+        }
+    }
+
+    &-appstore:lang(ru) {
+        background-image: url("@{path}btn-appstore-ru.@{ext}");
+
+        & when (@ext = 'png') {
+            @media (min-resolution: 2dppx) { background-image: url("@{path}btn-appstore-ru@2x.png"); }
+        }
+    }
+
+    &-gplay:lang(ru) {
+        background-image: url("@{path}btn-gplay-ru.@{ext}");
+
+        & when (@ext = 'png') {
+            @media (min-resolution: 2dppx) { background-image: url("@{path}btn-gplay-ru@2x.png"); }
+        }
+    }
+
+    &-microsoft:lang(ru) {
+        background-image: url("@{path}btn-microsoft-ru.@{ext}");
+
+        & when (@ext = 'png') {
+            @media (min-resolution: 2dppx) { background-image: url("@{path}btn-microsoft-ru@2x.png"); }
         }
     }
 }

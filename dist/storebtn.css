@@ -1,5 +1,6 @@
 .storebtn-appstore,
-.storebtn-gplay {
+.storebtn-gplay,
+.storebtn-microsoft {
   display: inline-block;
   vertical-align: text-bottom;
   overflow: hidden;
@@ -12,15 +13,17 @@
   background-color: #000;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: contain;
   color: transparent;
-  text-indent: 150%;
+  color: #FFF;
+  text-indent: -150%;
   text-decoration: none;
 }
-@media (min-resolution: 2dppx) {
-  .storebtn-appstore,
-  .storebtn-gplay {
-    background-size: contain;
-  }
+.storebtn-appstore:focus,
+.storebtn-gplay:focus,
+.storebtn-microsoft:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25em rgba(43, 154, 255, 0.4);
 }
 .storebtn-appstore {
   background-image: url("btn-appstore-en.png");
@@ -38,6 +41,14 @@
     background-image: url("btn-gplay-en@2x.png");
   }
 }
+.storebtn-microsoft {
+  background-image: url("btn-microsoft-en.png");
+}
+@media (min-resolution: 2dppx) {
+  .storebtn-microsoft {
+    background-image: url("btn-microsoft-en@2x.png");
+  }
+}
 .storebtn-appstore:lang(es) {
   background-image: url("btn-appstore-es.png");
 }
@@ -52,6 +63,86 @@
 @media (min-resolution: 2dppx) {
   .storebtn-gplay:lang(es) {
     background-image: url("btn-gplay-es@2x.png");
+  }
+}
+.storebtn-microsoft:lang(es) {
+  background-image: url("btn-microsoft-es.png");
+}
+@media (min-resolution: 2dppx) {
+  .storebtn-microsoft:lang(es) {
+    background-image: url("btn-microsoft-es@2x.png");
+  }
+}
+.storebtn-appstore:lang(de) {
+  background-image: url("btn-appstore-de.png");
+}
+@media (min-resolution: 2dppx) {
+  .storebtn-appstore:lang(de) {
+    background-image: url("btn-appstore-de@2x.png");
+  }
+}
+.storebtn-gplay:lang(de) {
+  background-image: url("btn-gplay-de.png");
+}
+@media (min-resolution: 2dppx) {
+  .storebtn-gplay:lang(de) {
+    background-image: url("btn-gplay-de@2x.png");
+  }
+}
+.storebtn-microsoft:lang(de) {
+  background-image: url("btn-microsoft-de.png");
+}
+@media (min-resolution: 2dppx) {
+  .storebtn-microsoft:lang(de) {
+    background-image: url("btn-microsoft-de@2x.png");
+  }
+}
+.storebtn-appstore:lang(fr) {
+  background-image: url("btn-appstore-fr.png");
+}
+@media (min-resolution: 2dppx) {
+  .storebtn-appstore:lang(fr) {
+    background-image: url("btn-appstore-fr@2x.png");
+  }
+}
+.storebtn-gplay:lang(fr) {
+  background-image: url("btn-gplay-fr.png");
+}
+@media (min-resolution: 2dppx) {
+  .storebtn-gplay:lang(fr) {
+    background-image: url("btn-gplay-fr@2x.png");
+  }
+}
+.storebtn-microsoft:lang(fr) {
+  background-image: url("btn-microsoft-fr.png");
+}
+@media (min-resolution: 2dppx) {
+  .storebtn-microsoft:lang(fr) {
+    background-image: url("btn-microsoft-fr@2x.png");
+  }
+}
+.storebtn-appstore:lang(ru) {
+  background-image: url("btn-appstore-ru.png");
+}
+@media (min-resolution: 2dppx) {
+  .storebtn-appstore:lang(ru) {
+    background-image: url("btn-appstore-ru@2x.png");
+  }
+}
+.storebtn-gplay:lang(ru) {
+  background-image: url("btn-gplay-ru.png");
+}
+@media (min-resolution: 2dppx) {
+  .storebtn-gplay:lang(ru) {
+    background-image: url("btn-gplay-ru@2x.png");
+  }
+}
+.storebtn-microsoft:lang(ru) {
+  background-image: url("btn-microsoft-ru.png");
+}
+@media (min-resolution: 2dppx) {
+  .storebtn-microsoft:lang(ru) {
+    background-image: url("btn-microsoft-ru@2x.png");
   }
 }
 /* hide buttons depending of mobile os */
