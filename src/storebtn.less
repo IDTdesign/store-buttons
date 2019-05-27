@@ -1,10 +1,10 @@
 .storebtn {
     @fz: inherit;
-    @bd: none;
-    @bdrs: 0.25em;
-    @path: "";
-    @ext: "png";
-    @links-hover: #2b9aff;
+    @bd: none;      // border
+    @bdrs: 0.25em;  // border radius 4px when font-size: 16px
+    @path: "";      // relative path from css file to images
+    @ext: "png";    // png or svg
+    @links-hover: fadeout(#2b9aff, 60%); // color of focus outline
 
     &-appstore,
     &-gplay,
@@ -13,8 +13,8 @@
         vertical-align: text-bottom;
         overflow: hidden;
         font-size: @fz;
-        width: 8.5em; //136px when font-size: 16px
-        height: 2.5em; //40px when font-size: 16px
+        width: 8.5em; // 136px when font-size: 16px
+        height: 2.5em; // 40px when font-size: 16px
         border: @bd;
         border-radius: @bdrs;
         padding: 0;
@@ -29,7 +29,7 @@
 
         &:focus {
             outline: none;
-            box-shadow: 0 0 0 0.25em fadeout(@links-hover, 60%);
+            box-shadow: 0 0 0 0.25em @links-hover;
         }
     }
 
@@ -153,6 +153,6 @@
     }
 }
 
-/* hide buttons depending of mobile os */
+/* hide buttons depending of mobile OS */
 .android .storebtn-appstore { display: none; }
 .ios .storebtn-gplay        { display: none; }
